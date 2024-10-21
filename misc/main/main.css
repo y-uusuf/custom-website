@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+    cursor: url('https://cdn.discordapp.com/emojis/1061905471612661762.webp?size=16&quality=lossless'), auto;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  clickAnywhere {
+    background-size: cover;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, rgb(0, 60, 255), rgb(240, 33, 26));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    transition: transform 0.3s, font-size 0.3s;
+    background-size: 200% auto;
+    animation: 
+     gradientAnimation 5s linear infinite,
+     blink-caret .5s step-end infinite;
+    cursor: url('https://cdn.discordapp.com/emojis/1055658605082316810.gif?size=20&quality=lossless'), auto;
+  }
+
+  .other-gradient-text {
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(131, 131, 131));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    cursor: pointer;
+    transition: transform 0.3s, font-size 0.3s;
+    background-size: 200% auto;
+    animation: gradientAnimation 5s linear infinite;
+  }
+
+  .vid-gradient-text {
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 94, 0), rgb(255, 230, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(98, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    transition: transform 0.3s, font-size 0.3s;
+    background-size: 200% auto;
+    animation: gradientAnimation 5s linear infinite;
+    cursor: pointer;
+  }
+
+  .vid1-gradient-text {
+    background: linear-gradient(to right, rgb(98, 0, 255), rgb(255, 215, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    transition: transform 0.3s, font-size 0.3s;
+    background-size: 200% auto;
+    animation: gradientAnimation 5s linear infinite;
+  }
+  
+  .discord-frame {
+    cursor: url('https://cdn.discordapp.com/emojis/1189552054646100059.webp?size=20&quality=lossless'), auto;
+    background-size: 200% auto;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+
+  .discord-frame:hover {
+    border-image-width: 90px;
+  }
+
+  
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-text:hover {
+    font-size: 35px;
+  }
+  .other-gradient-text:hover {
+    font-size: 35px;
+  }
+  
+  .social-media-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent; /* Use 'transparent' to avoid an unnecessary alpha value */
+    margin-top: 20px;
+    background-image: url('https://media.discordapp.net/attachments/987149728800198686/991834200309248070/sparkle.gif');
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  .social-media-links li {
+    margin: 0 10px;
+  }
+  
+  .social-media-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: url('https://cdn.discordapp.com/emojis/1233846855100666058.webp?size=20&quality=lossless'), auto;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  .social-media-links li a:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-media-links li a i {
+    font-size: 36px;
+  }
+  
+  .social-media-links li a span {
+    display: none;
+  }
+  
+  .typewriter-text {
+    overflow: hidden;
+    border-right: 0.15em solid black; /* Cursor style */
+    white-space: nowrap;
+    font-size: 1.5em;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+.vid-social-media-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: transparent; /* Use 'transparent' to avoid an unnecessary alpha value */
+  margin-top: 20px;
+}
+
+.vid-social-media-links li {
+  margin: 0 10px;
+}
+
+.vid-social-media-links li a {
+  color: #000000;
+  text-decoration: none;
+  transition: transform 0.3s, font-size 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  animation: vidGradientAnimation 5s linear infinite;
+}
+
+.vid-social-media-links li a:hover {
+  transform: scale(1.2);
+}
+
+.vid-social-media-links li a i {
+  font-size: 36px;
+}
+
+.vid-social-media-links li a span {
+  display: none;
+}
+
+  
+@keyframes vidGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
