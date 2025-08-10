@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <div class="background"></div>
+  <div class="background" id=""></div>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta property="og:image" content="https://cdn.discordapp.com/attachments/1135362150236438632/1174821819421831258/icon.png?ex=6568fd14&is=65568814&hm=c8e62e3c04f1ba73962fdf7060d3f10d3b065de4da1e827d5c34f5cd5caa0251&">
@@ -38,25 +38,31 @@
             display: none; /* Initially hide the video */
         }
     </style>
+    <style>
+      .hidden { display: none; }
+      .typewriter h4 { color: #fff; font-family: monospace; overflow: hidden; border-right: .15em solid orange; white-space: nowrap; margin: 0 auto;  letter-spacing: .15em; animation:  typing 3.5s steps(30, end), blink-caret .5s step-end infinite; }  
+     </style>
 </head>
 
-<body>
-<main> 
-    <audio id="audioplayer" loop>
-        <source src="https://cdn.discordapp.com/attachments/1101616312322629662/1242191358215716985/che_-_Miley_Cyrus.mp3?ex=664cf05a&is=664b9eda&hm=a21b433aef6f6c5a7f1edebb56f1758d28b860332b1825597548b1cc7391ee3d&" type="audio/mpeg">
-    </audio>
+<audio id="audio">
+  <source src="./misc/main/Voice.mp3" type="audio/mpeg">
+</audio>
+
+<body onclick="revealContent(), playAudio()">
+<main id="mainContent" class="hidden"> 
+
 
     <div class="snowflakes"></div>
     <h2><a id='play' target="_blank" class="gradient-text">^_<</a></h2>
     <ul id= "ccc" class="social-media-links">
       <li>
-          <a href="https://www.tiktok.com/@frxbid" target="_blank">
+          <a href="https://www.tiktok.com/@y.uusuf" target="_blank">
             <i class="fab fa-tiktok"></i>
             <span>TikTok</span>
           </a>
         </li>
         <li>
-          <a href="https://github.com/frxbid" target="_blank">
+          <a href="https://github.com/y.uusuf" target="_blank">
             <i class="fab fa-github"></i>
             <span>Github</span>
           </a>
@@ -74,8 +80,8 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/frxbid" target="_blank">
-            <i class="fab fa-telegram"></i>
+          <a href="https://www.instagram.com/yuuusuuuufffffff/" target="_blank">
+            <i class="fab fa-instagram"></i>
             <span>Telegram</span>
           </a>
           <div class="sparkles-container"></div>
@@ -86,5 +92,21 @@
       <img src="https://discord.c99.nl/widget/theme-4/509117215954436122.png" style="width: 300px;">
   </a>
 </main>
+<script>
+  function playAudio() {
+    var mp3 = document.getElementById('audio');
+    mp3.volume = 0.6;
+    mp3.loop = true;
+    
+    // Try to play the audio when the page is clicked
+    mp3.play().catch(error => {
+      console.log('Error playing audio:', error);
+    });
+
+    // Hide the click message once audio starts
+    document.getElementById("clickAnywhere").style.display = 'none';
+  }
+</script>
+<div id="clickAnywhere" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 999; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; cursor: url('https://cdn.discordapp.com/emojis/844839193158352936.webp?size=20&amp;quality=lossless'), auto;">click anywhere.</div>
 </body>
 </html>

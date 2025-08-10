@@ -1,5 +1,6 @@
 const background = document.querySelector('.background');
 let numStars = 1000;
+let starsCreated = false;  // Flag to check if stars are already created
 
 function createStars() {
   for (let i = 0; i < numStars; i++) {
@@ -37,10 +38,14 @@ function updateStars() {
   createStars();
 }
 
-// Initial star creation
-createStars();
+function handleFirstClick() {
+  if (!starsCreated) {  // Only run if stars have not been created yet
+    createStars();      // Create stars on first click
+    window.addEventListener('resize', updateStars);  // Add resize event listener for responsive stars
+    starsCreated = true;  // Set flag to true so stars won't be created again
+  }
+  document.body.removeEventListener('click', handleFirstClick);  // Remove this click event to prevent further triggering
+}
 
-// Handle window resize event
-window.addEventListener('resize', () => {
-  updateStars();
-});
+// Add the event listener to body for the first click
+document.body.addEventListener('click', handleFirstClick);

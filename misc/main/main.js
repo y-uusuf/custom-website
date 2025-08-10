@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var title = document.title;
     var count = 0;
     var normal = [
-      "¿¿¿ • @frxbid"
+      "¿ • @y.uusuf"
   ];
 
 
@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 })
 
+function revealContent() {
+  document.getElementById('mainContent').classList.remove('hidden');
+  document.getElementById('clickAnywhere').style.display = 'none';
+
+}
 document.addEventListener("dragover", ev => {
   ev.dataTransfer.dropEffect = "none";
   ev.preventDefault();
@@ -22,7 +27,7 @@ function setFavicon() {
   var link = document.createElement('link');
   link.type = 'image/jpg';
   link.rel = 'icon';
-  link.href = 'https://i.pinimg.com/236x/a6/fe/64/a6fe646a316ce7f0a5aab48a20095c0d.jpg';
+  link.href = 'https://i.pinimg.com/474x/ff/a6/d0/ffa6d01c0f66f5e5e7f0f1d7b5d4819c.jpg';
 
   document.head.appendChild(link);
 }
